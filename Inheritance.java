@@ -19,6 +19,7 @@ public class Inheritance {
     }
 }*/
 
+//Single Inheritance
 class A{
     void methodA(){
         System.out.println("Method of A class");
