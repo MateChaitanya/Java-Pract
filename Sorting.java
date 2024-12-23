@@ -27,7 +27,7 @@ public class Sorting {
         for (int i = 0; i < arr.length - 1; i++) {
             // Find the minimum element in the unsorted part
             int minIdx = i;
-            for (int j = i + 1; j < arr.length-1; j++) {
+            for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j] < arr[minIdx]) {
                     minIdx = j;
                 }

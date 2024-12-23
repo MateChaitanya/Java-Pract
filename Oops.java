@@ -1,10 +1,12 @@
 public class Oops {
-    public void eat(){
-        System.out.println("I am eating");
-    }
+
     public static void main(String[] args) {
-        System.out.println("1");
-        Oops Buzo = new Oops();
-        Buzo.eat();
+        int x;
+        if(args.length>0){
+            x=10;
+        }else{
+            x=20;
+        }
+        System.out.println(x);
     }
 }
