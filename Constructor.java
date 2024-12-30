@@ -40,7 +40,7 @@ public class Constructor {
 }
 */
 
-
+/* 
 //This() function
 class XYZ {
    int num;
@@ -66,3 +66,35 @@ public class Constructor {
        obj.display();
    }
 }
+*/
+
+
+
+//Super Keyword
+//The super keyword refers to the parent class. It is used to:
+
+//Call parent class variables or methods.
+//Call the parent class constructor.
+//Example: Accessing Parent Class Variables
+
+class Parent {
+   int num = 50;
+}
+
+class Child extends Parent {
+   int num = 100;
+
+   void display() {
+       System.out.println("Child num: " + num);
+       System.out.println("Parent num: " + super.num); // Refers to parent class variable
+   }
+}
+
+public class Constructor {
+   public static void main(String[] args) {
+       Child obj = new Child();
+       obj.display();
+   }
+}
+
+
