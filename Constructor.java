@@ -69,7 +69,7 @@ public class Constructor {
 */
 
 
-
+/* 
 //Super Keyword
 //The super keyword refers to the parent class. It is used to:
 
@@ -97,4 +97,152 @@ public class Constructor {
    }
 }
 
+*/
 
+
+/* 
+//super()
+//The super() keyword is used to call the parent class constructor. It must be the first statement in the child class constructor.
+
+class Parent {
+   Parent() {
+       System.out.println("Parent Constructor");
+   }
+}
+
+class Child extends Parent {
+   Child() {
+       super(); // Calls the parent class constructor
+       System.out.println("Child Constructor");
+   }
+}
+
+public class Constructor {
+   public static void main(String[] args) {
+       Child obj = new Child();
+   }
+}
+
+*/
+/* 
+class ABC{
+   ABC(){                         // 0 arg Cons
+      this(10);                  // calls the another cons in same class ABC(Int i)
+      System.out.println("A");
+   }
+
+   ABC(int i){                  // one arg Cons
+      this(10,20);           // Calls the another con ABC(Int j , Int k)
+      System.out.println("B");
+   }
+
+   ABC(int j , int k){
+      System.out.println("C");
+   }
+}
+   public class Constructor{
+      public static void main(String[] args) {
+         ABC aa = new ABC();
+         //ABC ab = new ABC(10);
+         //ABC ac = new ABC(10,20);
+      }
+   }
+
+   */
+
+/*class LMN{
+   LMN(int i){
+      System.out.println("Super Parent");
+   }
+}
+class XYZ extends LMN{
+   XYZ(int i , int j){
+      super(i);
+      System.out.println("2 Args Con");
+   }
+   XYZ(int i){
+      super(i);
+     System.out.println("Parent class Cons");
+   }
+}
+class ABC extends XYZ{
+
+   ABC(){                        
+      super(10);                   // Call parent class const -> 1 arg con
+      System.out.println("A");
+   }
+    
+   ABC( int i){
+      super(i,33);                 // call parent class Cons -> 2 arg con
+      System.out.println("B");
+   }
+}
+   public class Constructor{
+      public static void main(String[] args) {
+         ABC aa = new ABC();
+         ABC ab = new ABC(10);
+      }
+   }
+      */
+
+/* 
+class ABC{
+   int num ;
+   String name;,
+
+    ABC(){
+      this(0,"Default");
+      System.out.println("Default Constructor Called");
+    }
+
+    ABC(int num , String name){
+      this.num = num;
+      this.name = name;
+      System.out.println("Parametrized Cons Called ");
+    }
+    void display(){
+      System.out.println("Number:" + num + ", Name:"+name);
+    }
+
+}
+
+public class Constructor{
+   public static void main(String[] args) {
+      ABC a = new ABC();
+      a.display();
+      ABC b = new ABC(42,"Java");
+      b.display();
+   }
+}
+   */
+
+
+class Parent{
+   int num = 50;
+   Parent(){
+      System.out.println("Parent class can called");
+   }
+
+   void display(){
+      System.out.println("Parent class Method called");
+   }
+}
+class Child extends Parent{
+   int num = 100;
+   Child(){
+      super();
+      System.out.println("Child Class Con Called");
+      System.out.println("Parent Class Con Called");
+   }
+   void show(){
+      super.display();
+      System.out.println("Child Class var :" + num);
+
+   }
+}
+public class Constructor{
+   public static void main(String[] args) {
+      Child A = new Child();
+      A.show();
+   }
+}
