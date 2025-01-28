@@ -220,7 +220,7 @@ public class Constructor{
 class Parent{
    int num = 50;
    Parent(){
-      System.out.println("Parent class can called");
+      System.out.println("Parent class con called");
    }
 
    void display(){
