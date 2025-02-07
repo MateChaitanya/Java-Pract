@@ -1,5 +1,5 @@
 
-
+/* 
 //Yeild() Method
 class MyThread extends Thread{
     public void run(){
@@ -19,11 +19,11 @@ public class Threadmethods {
         }
     }
 }
+*/
 
-
-
-//Sleep()
 /* 
+//Sleep()
+
 class Threadmethods{
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Chaitu");
@@ -34,3 +34,33 @@ class Threadmethods{
     }
 }
 */
+
+//Join()
+
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Chaitanya");
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                // Handle exception
+            }
+        }
+    }
+}
+
+class Threadmethods {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();
+        try {
+            t1.join(); // Handling InterruptedException
+        } catch (InterruptedException e) {
+            // Handle exception
+        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Mate");
+        }
+    }
+}
