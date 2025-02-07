@@ -1,4 +1,4 @@
-/*
+
 
 //Yeild() Method
 class MyThread extends Thread{
@@ -10,7 +10,6 @@ class MyThread extends Thread{
     }
 }
 
-
 public class Threadmethods {
     public static void main(String[] args) {
         MyThread t = new MyThread();
@@ -21,10 +20,10 @@ public class Threadmethods {
     }
 }
 
-*/
+
 
 //Sleep()
-
+/* 
 class Threadmethods{
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Chaitu");
@@ -34,3 +33,4 @@ class Threadmethods{
         System.out.println("Solution");
     }
 }
+*/
